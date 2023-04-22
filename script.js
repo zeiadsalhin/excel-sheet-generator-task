@@ -39,14 +39,14 @@ const genbtn = document.getElementById("generate");
 const expbtn = document.getElementById("export");
 
 genbtn.addEventListener("click", () => {
-  if (rowno.value == "" && colno.value == "") {
+  if (rowno.value == "" || colno.value == "") {
     swal("Oops", "Fileds cannot be empty!", "error");
   }
 });
 
 // alert no table (empty fields)
 expbtn.addEventListener("click", () => {
-  if (rowno.value == 0 && colno.value == 0) {
+  if (rowno.value == 0 || colno.value == 0) {
     swal("Oops", "Table not exist!", "error");
   }
 });
